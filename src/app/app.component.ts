@@ -1,12 +1,11 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PokemonEntity } from './entities/pokemonEntity';
-import { NgFor } from '@angular/common';
+import { HoverDirective } from './directives/hover.directive';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet, NgFor],
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -506,7 +505,6 @@ export class AppComponent implements AfterViewInit{
     let center = document.querySelector('.center-card');
     center?.classList.remove('center-card');
     center = document.querySelector(`#pokemon-${this.currentIndex}`);
-    console.log(center);
     center?.classList.add('center-card');
   }
   updateRight(): void {

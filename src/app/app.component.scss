@@ -72,7 +72,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height:85dvh;
+    height: 85dvh;
 }
 
 .content h1 {
@@ -172,7 +172,7 @@ main {
     margin: 0 16px;
 }
 
-.spacer{
+.spacer {
     flex: 1;
 }
 
@@ -191,7 +191,18 @@ main {
     }
 }
 
-.gallery {
+.pokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    flex-direction: row;
+    border-radius: 40px;
+    background-color: white;
+}
+
+.gallery.clicked {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -199,85 +210,103 @@ main {
     width: 100%;
     overflow: hidden;
     margin-top: 1rem;
-    height: 400px; /* Ajusta la altura según necesites */
+    height: 400px;
+
+
+    .pokemon {
+        width: clamp(300px, 80%, 400px);
+        position: absolute;
+        opacity: 0;
+        transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    .column {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin: 1rem;
+        flex-direction: column;
+    }
+
+    .left {
+        background-color: grey;
+    }
+
+    .pokemon-type {
+        text-transform: capitalize;
+    }
+
+    .pokemon-types {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        margin: 1rem;
+        flex-direction: row;
+    }
+
+    .pokemon-ability {
+        text-transform: capitalize;
+    }
+
+    .pokemon-order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    .pokemon.left-hidden-card {
+        transform: translateX(-200%) scale(0.8);
+        opacity: 0;
+    }
+
+    .pokemon.left-card {
+        transform: translateX(-150%) scale(0.9);
+        opacity: 0.75;
+    }
+
+    .pokemon.center-card {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .pokemon.right-card {
+        transform: translateX(150%) scale(0.9);
+        opacity: 0.75;
+    }
+
+    .pokemon.right-hidden-card {
+        transform: translateX(200%) scale(0.8);
+        opacity: 0;
+    }
 }
 
-.pokemon {
+.gallery.not-clicked{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem;
-    flex-direction: row;
-    width: clamp(300px, 80%, 400px); /* Ajusta el ancho máximo */
-    border-radius: 40px;
-    background-color: white;
-    position: absolute;
-    opacity: 0;
-    transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.column {
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: 1rem;
     flex-wrap: wrap;
-    gap: 1rem;
-    margin: 1rem;
-    flex-direction: column;
-}
-
-.left {
-    background-color: grey;
-}
-
-.pokemon-type {
-    text-transform: capitalize;
-}
-
-.pokemon-types {
-    display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
-    margin: 1rem;
-    flex-direction: row;
-}
 
-.pokemon-ability {
-    text-transform: capitalize;
-}
 
-.pokemon-order {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 0;
-}
+    .pokemon {
+        width: clamp(200px, 10%, 400px);
 
-.pokemon.left-hidden-card {
-    transform: translateX(-200%) scale(0.8);
-    opacity: 0;
-}
+        .right{
+            display: none;
+        }
 
-.pokemon.left-card {
-    transform: translateX(-150%) scale(0.9);
-    opacity: 0.75;
-}
+        .left{
 
-.pokemon.center-card {
-    transform: translateX(0) scale(1);
-    opacity: 1;
-    z-index: 1;
-}
+            *:not(.pokemon-img):not(.pokemon-name) {
+                display: none;
+            }
+        }
+    }
 
-.pokemon.right-card {
-    transform: translateX(150%) scale(0.9);
-    opacity: 0.75;
-}
-
-.pokemon.right-hidden-card {
-    transform: translateX(200%) scale(0.8);
-    opacity: 0;
 }
