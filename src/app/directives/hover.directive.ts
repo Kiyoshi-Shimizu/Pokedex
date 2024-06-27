@@ -10,4 +10,7 @@ export class HoverDirective {
   @HostListener('mouseenter') onMouseMove() {
     this.ele.nativeElement.style.color = 'blue';
   }
+  @HostListener('mouseleave') onMouseLeave() {
+    this.ele.nativeElement.style.color = 'black';
+  }
 }

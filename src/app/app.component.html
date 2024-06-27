@@ -8,26 +8,30 @@
   <div class="spacer"></div>
   <section class="gallery not-clicked">
     @for(pokemon of pokemons; track pokemon.order){
-      <article class="pokemon" id="pokemon-{{pokemon.order}}" (click)="selectPokemon(pokemon.order)" appHover>
-          <article class="column left">
-            <img class="pokemon-img" [src]="pokemon.detail.sprites.front_default" alt="{{pokemon.name}}">
-            <h2 class="pokemon-name">{{pokemon.name}}</h2>
-            <p class="pokemon-order">No. {{pokemon.order}}</p>
-            <h3>Types</h3>
-            <ul class="pokemon-types">
-              <li *ngFor="let type of pokemon.detail.types" class="pokemon-type">{{type.type.name}}</li>
-            </ul>
-          </article>
-          <article class="column right">
-            <h3>Abilities</h3>
-            <ul class="pokemon-abilities">
-              <li *ngFor="let ability of pokemon.detail.abilities" class="pokemon-ability">{{ability.ability.name}}</li>
-            </ul>
-            <h3>Height</h3>
-            <p>{{pokemon.detail.height}}</p>
-            <h3>Weight</h3>
-            <p>{{pokemon.detail.weight}}</p>
-          </article>
+      <article class="pokemon-card" (click)="selectPokemon(pokemon.order)"  appHover>
+        <img class="pokemon-model" [src]="pokemon.detail.sprites.other.showdown.front_default" alt="{{pokemon.name}}">
+        <article class="pokemon" id="pokemon-{{pokemon.order}}" >
+            <article class="column left"  [appPokemonType]="pokemon.detail.types[0].type.name">
+              <img class="pokemon-img" [src]="pokemon.detail.sprites.front_default" alt="{{pokemon.name}}">
+              <h2 class="pokemon-name">{{pokemon.name}}</h2>
+              <p class="pokemon-order">No. {{pokemon.order}}</p>
+              <h3>Types</h3>
+              <ul class="pokemon-types">
+                <li *ngFor="let type of pokemon.detail.types" class="pokemon-type">{{type.type.name}}</li>
+              </ul>
+            </article>
+            <article class="column right">
+              <h3>Abilities</h3>
+              <ul class="pokemon-abilities">
+                <li *ngFor="let ability of pokemon.detail.abilities" class="pokemon-ability">{{ability.ability.name}}</li>
+              </ul>
+              <h3>Height</h3>
+              <p>{{pokemon.detail.height}}</p>
+              <h3>Weight</h3>
+              <p>{{pokemon.detail.weight}}</p>
+            </article>
+        </article>
+
       </article>
     }
   </section>

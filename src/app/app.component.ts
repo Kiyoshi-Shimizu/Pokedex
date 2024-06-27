@@ -42,7 +42,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/204.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/204.gif'
+            }
+          }
         },
         moves: [
           {
@@ -91,7 +96,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/205.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/205.gif'
+            }
+          }
         },
         moves: [
           {
@@ -132,7 +142,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/206.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/206.gif'
+            }
+          }
         },
         moves: [
           {
@@ -181,7 +196,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/207.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/207.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/207.gif'
+            }
+          }
         },
         moves: [
           {
@@ -230,7 +250,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/208.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/208.gif'
+            }
+          }
         },
         moves: [
           {
@@ -271,7 +296,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/209.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/209.gif'
+            }
+          }
         },
         moves: [
           {
@@ -312,7 +342,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/210.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/210.gif'
+            }
+          }
         },
         moves: [
           {
@@ -361,7 +396,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/211.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/211.gif'
+            }
+          }
         },
         moves: [
           {
@@ -410,7 +450,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/212.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/212.gif'
+            }
+          }
         },
         moves: [
           {
@@ -459,7 +504,12 @@ export class AppComponent implements AfterViewInit{
           }
         ],
         sprites: {
-          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png'
+          front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/213.png',
+          other: {
+            showdown: {
+              front_default: 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/213.gif'
+            }
+          }
         },
         moves: [
           {
