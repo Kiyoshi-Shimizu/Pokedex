@@ -1,0 +1,122 @@
+.content {
+    display: flex;
+    max-width: 100%;
+    margin: 60px auto 0;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://imgs.search.brave.com/RMsRbQAFufiwl-71vX3NbNx4cLh-s0a2xGTChHT4D88/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI4Mjgx/MzguanBn");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 85dvh;
+}
+
+.content h1 {
+    margin-top: 1.75rem;
+    color: white;
+}
+
+.pokemon-model{
+    height: 120px;
+    max-width: clamp(100px, 20%, 250px);
+}
+
+.pokemon-card{
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pokemon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem;
+    flex-direction: row;
+    border-radius: 40px;
+    transition: all 0.3s ease-in-out;
+}
+.column {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.left{
+    width: 100%;
+    margin: 0;
+    border-radius: 40px;
+    height: 100%;
+}
+.gallery{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    justify-content: center;
+
+
+    .pokemon-card {
+        width: clamp(200px, 20%, 400px);
+
+        .pokemon{
+            width: 100%;
+        }
+        .right{
+            display: none;
+        }
+
+        .left{
+            box-shadow: inset 0 10px 70px rgba(0, 0, 0, 0.4);
+
+            *:not(.pokemon-img):not(.pokemon-name) {
+                display: none;
+            }
+        }
+
+        .pokemon-model{
+            display: none;
+        }
+    }
+
+    .pokemon-card:hover{
+        .pokemon{
+            transform: perspective(900px) translateY(-5%) rotateX(25deg);
+            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+            transition: all 0.3s ease-in-out;  
+
+        }
+
+        .pokemon-img{
+            transition: opacity 0.25s ease;
+            opacity: 0;
+        }
+
+        .pokemon-model{
+            display: inline;
+            opacity: 1;
+            position: absolute;
+            z-index: 1;
+            transition: all 0.5s ease;
+            animation: slideIn 0.5s ease;
+
+        }
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0%);
+                opacity: 1;
+            }
+            
+        }
+    }
+
+
+}

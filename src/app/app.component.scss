@@ -62,22 +62,7 @@ main {
     max-width: 9.2rem;
 }
 
-.content {
-    display: flex;
-    max-width: 100%;
-    margin: 82px auto 32px;
-    flex-direction: column;
-    align-items: center;
-    background-image: url("https://imgs.search.brave.com/RMsRbQAFufiwl-71vX3NbNx4cLh-s0a2xGTChHT4D88/rs:fit:860:0:0/g:ce/aHR0cHM6Ly93YWxs/cGFwZXJjYXZlLmNv/bS93cC93cDI4Mjgx/MzguanBn");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 85dvh;
-}
 
-.content h1 {
-    margin-top: 1.75rem;
-}
 
 .content p {
     // margin-top: 1.5rem;
@@ -155,22 +140,7 @@ main {
     fill: var(--gray-900);
 }
 
-.toolbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-}
 
-.toolbar img {
-    margin: 0 16px;
-}
 
 .spacer {
     flex: 1;
@@ -191,40 +161,8 @@ main {
     }
 }
 
-.pokemon-model{
-    height: 120px;
-    max-width: clamp(100px, 20%, 250px);
-}
 
-.pokemon-card{
-    display: flex;
-    justify-content: center;
-}
 
-.pokemon{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    margin: 1rem;
-    flex-direction: row;
-    border-radius: 40px;
-    background-color: white;
-}
-.column {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    flex-direction: column;
-}
-.left{
-    width: 100%;
-    margin: 0;
-    border-radius: 40px;
-    height: 100%;
-}
 .gallery.clicked {
     display: flex;
     justify-content: center;
@@ -300,73 +238,4 @@ main {
         transform: translateX(200%) scale(0.8);
         opacity: 0;
     }
-}
-
-.gallery.not-clicked{
-    display: flex;
-    width: 100%;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-
-
-    .pokemon-card {
-        width: clamp(200px, 20%, 400px);
-
-        .pokemon{
-            width: 100%;
-        }
-        .right{
-            display: none;
-        }
-
-        .left{
-
-            *:not(.pokemon-img):not(.pokemon-name) {
-                display: none;
-            }
-        }
-
-        .pokemon-model{
-            display: none;
-        }
-    }
-
-    .pokemon-card:hover{
-        .pokemon{
-            transition: all 0.25s ease;
-            transform: perspective(900px) translateY(-5%) rotateX(25deg);
-            box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-
-        }
-
-        .pokemon-img{
-            transition: opacity 0.25s ease;
-            opacity: 0;
-        }
-
-        .pokemon-model{
-            display: inline;
-            opacity: 1;
-            position: absolute;
-            z-index: 1;
-            transition: all 0.5s ease;
-            animation: slideIn 0.5s ease;
-
-        }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateY(100%);
-                opacity: 0;
-            }
-            100% {
-                transform: translateY(0%);
-                opacity: 1;
-            }
-            
-        }
-    }
-
-
 }
