@@ -1,17 +1,9 @@
-import { Component } from '@angular/core';
-import { PokemonEntity } from '../../../app/entities/pokemonEntity';
+import { PokemonEntity } from "../../app/entities/pokemonEntity";
 
-@Component({
-  selector: 'app-catalog',
-  standalone: false,
-  templateUrl: './catalog.component.html',
-  styleUrl: './catalog.component.scss'
-})
-export class CatalogComponent {
-  pokemons: PokemonEntity[] = [
+export const pokemons: PokemonEntity[] = [
     {
       order: 301,
-      name: 'Pineco',
+      name: 'pineco',
       url:'https://pokeapi.co/api/v2/pokemon/204/',
       detail: {
         id: 204,
@@ -57,7 +49,7 @@ export class CatalogComponent {
     },
     {
       order: 302,
-      name: 'Forretress',
+      name: 'forretress',
       url:'https://pokeapi.co/api/v2/pokemon/205/',
       detail: {
         id: 205,
@@ -111,7 +103,7 @@ export class CatalogComponent {
     },
     {
       order: 303,
-      name: 'Dunsparce',
+      name: 'dunsparce',
       url:'https://pokeapi.co/api/v2/pokemon/206/',
       detail: {
         id: 206,
@@ -157,7 +149,7 @@ export class CatalogComponent {
     },
     {
       order: 304,
-      name: 'Gligar',
+      name: 'gligar',
       url:'https://pokeapi.co/api/v2/pokemon/207/',
       detail: {
         id: 207,
@@ -211,7 +203,7 @@ export class CatalogComponent {
     },
     {
       order: 305,
-      name: 'Steelix',
+      name: 'steelix',
       url:'https://pokeapi.co/api/v2/pokemon/208/',
       detail: {
         id: 208,
@@ -265,7 +257,7 @@ export class CatalogComponent {
     },
     {
       order: 306,
-      name: 'Snubbull',
+      name: 'snubbull',
       url:'https://pokeapi.co/api/v2/pokemon/209/',
       detail: {
         id: 209,
@@ -311,7 +303,7 @@ export class CatalogComponent {
     },
     {
       order: 307,
-      name: 'Granbull',
+      name: 'granbull',
       url:'https://pokeapi.co/api/v2/pokemon/210/',
       detail: {
         id: 210,
@@ -357,7 +349,7 @@ export class CatalogComponent {
     },
     {
       order: 308,
-      name: 'Qwilfish',
+      name: 'qwilfish',
       url:'https://pokeapi.co/api/v2/pokemon/211/',
       detail: {
         id: 211,
@@ -411,7 +403,7 @@ export class CatalogComponent {
     },
     {
       order: 309,
-      name: 'Scizor',
+      name: 'scizor',
       url:'https://pokeapi.co/api/v2/pokemon/212/',
       detail: {
         id: 212,
@@ -465,7 +457,7 @@ export class CatalogComponent {
     },
     {
       order: 310,
-      name: 'Shuckle',
+      name: 'shuckle',
       url:'https://pokeapi.co/api/v2/pokemon/213/',
       detail: {
         id: 213,
@@ -518,7 +510,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Heracross',
+      name: 'heracross',
       order: 311,
       url:'https://pokeapi.co/api/v2/pokemon/214/',
       detail: {
@@ -572,7 +564,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Sneasel',
+      name: 'sneasel',
       order: 312,
       url:'https://pokeapi.co/api/v2/pokemon/215/',
       detail: {
@@ -626,7 +618,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Teddiursa',
+      name: 'teddiursa',
       order: 313,
       url:'https://pokeapi.co/api/v2/pokemon/216/',
       detail: {
@@ -672,7 +664,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Ursaring',
+      name: 'ursaring',
       order: 314,
       url:'https://pokeapi.co/api/v2/pokemon/217/',
       detail: {
@@ -718,7 +710,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Slugma',
+      name: 'slugma',
       order: 315,
       url:'https://pokeapi.co/api/v2/pokemon/218/',
       detail: {
@@ -764,7 +756,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Magcargo',
+      name: 'magcargo',
       order: 316,
       url:'https://pokeapi.co/api/v2/pokemon/219/',
       detail: {
@@ -818,7 +810,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Swinub',
+      name: 'swinub',
       order: 317,
       url:'https://pokeapi.co/api/v2/pokemon/220/',
       detail: {
@@ -872,7 +864,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Piloswine',
+      name: 'piloswine',
       order: 318,
       url:'https://pokeapi.co/api/v2/pokemon/221/',
       detail: {
@@ -926,7 +918,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Corsola',
+      name: 'corsola',
       order: 319,
       url:'https://pokeapi.co/api/v2/pokemon/222/',
       detail: {
@@ -980,7 +972,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Remoraid',
+      name: 'remoraid',
       order: 320,
       url:'https://pokeapi.co/api/v2/pokemon/223/',
       detail: {
@@ -1026,7 +1018,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Octillery',
+      name: 'octillery',
       order: 321,
       url:'https://pokeapi.co/api/v2/pokemon/224/',
       detail: {
@@ -1072,7 +1064,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Delibird',
+      name: 'delibird',
       order: 322,
       url:'https://pokeapi.co/api/v2/pokemon/225/',
       detail: {
@@ -1126,7 +1118,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Mantine',
+      name: 'mantine',
       order: 323,
       url:'https://pokeapi.co/api/v2/pokemon/226/',
       detail: {
@@ -1180,7 +1172,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Skarmory',
+      name: 'skarmory',
       order: 324,
       url:'https://pokeapi.co/api/v2/pokemon/227/',
       detail: {
@@ -1234,7 +1226,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Houndour',
+      name: 'houndour',
       order: 325,
       url:'https://pokeapi.co/api/v2/pokemon/228/',
       detail: {
@@ -1288,7 +1280,7 @@ export class CatalogComponent {
       }
     },
     {
-      name: 'Houndoom',
+      name: 'houndoom',
       order: 326,
       url:'https://pokeapi.co/api/v2/pokemon/229/',
       detail: {
@@ -1342,4 +1334,3 @@ export class CatalogComponent {
       }
     }
   ];
-}

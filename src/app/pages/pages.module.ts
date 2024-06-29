@@ -7,7 +7,6 @@ import { ShellComponent } from './shell/shell.component';
 import { SharedModule } from '../../shared/shared.module';
 
 
-
 @NgModule({
   declarations: [PagesComponent, ShellComponent],
   imports: [

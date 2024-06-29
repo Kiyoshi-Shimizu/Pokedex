@@ -3,7 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-pages',
   standalone: false,
-  template: '<router-outlet></router-outlet>',
+  template:   `
+     <app-shell></app-shell>
+   `,
   styleUrl: './pages.component.scss'
 })
 export class PagesComponent {
