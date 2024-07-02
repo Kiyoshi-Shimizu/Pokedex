@@ -11,4 +11,6 @@ export interface PokemonDetailEntity{
     sprites: Sprite;
     types: Type[];
     weight: number;
+    name: string;
+    order: number;
 }

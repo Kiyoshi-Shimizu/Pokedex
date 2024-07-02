@@ -1,1 +1,28 @@
-<p>pokemon-detail works!</p>
+<main class="content">
+    @if(pokemon){
+        <section class="pokemon-card">
+            <article class="pokemon-detail-header">
+                <img class="pokemon-detail-img" [src]="pokemon.detail.sprites.front_default" alt="{{pokemon.name}}">
+                <h1 class="pokemon-detail-name">{{pokemon.name}}</h1>
+                <span class="pokemon-detail-id">#{{pokemon.detail.id}}</span>
+                <article class="pokemon-detail-types">
+                    @for(type of pokemon.detail.types; track type.type.name){
+                        <article class="pokemon-detail-type">
+                            <span class="pokemon-detail-type-name">{{type.type.name}}</span>
+                        </article>
+                    }
+                </article>
+            </article>
+            <article class="pokemon-detail-body">
+                <article class="pokemon-detail-abilites">
+                    <h2 class="pokemon-detail-abilites-title">Base Abilities</h2>
+                    @for(ability of pokemon.detail.abilities; track ability.slot){
+                        <article class="pokemon-detail-ability">
+                            <span class="pokemon-detail-ability-name">{{ability.ability.name}}</span>
+                        </article>
+                    }
+                </article>
+            </article>
+        </section>
+    }
+</main>

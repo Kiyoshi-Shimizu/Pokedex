@@ -1,12 +1,16 @@
 <div class="content">
+  <div class="filterBox" fxFlex="60">
+    <label>Buscar</label>
+    <input #autofocus [(ngModel)]="filterValue">
+  </div>
     <h1>Gotta Catch 'Em All!</h1>
     <!-- <div class="spacer"></div> -->
     <section class="gallery">
-      @for(pokemon of pokeList; track pokemon.order){
-        <article class="pokemon-card"  appHover>
+      @for(pokemon of pokeList | filterName: filterValue; track pokemon.name){
+        <article class="pokemon-card"  appHover (click)="openDetail(pokemon.detail.id)">
           <img class="pokemon-model" [src]="pokemon.detail.sprites.other.showdown.front_default" alt="{{pokemon.name}}">
-          <article class="pokemon" id="pokemon-{{pokemon.order}}" >
-              <article class="column left"  [appPokemonType]="pokemon.detail.types[0].type.name" [appPokemonType2]="pokemon.detail.types[1] == null ? null : pokemon.detail.types[1].type.name">
+          <article class="pokemon" id="pokemon-{{pokemon.id}}" >
+              <article class="column left" [appPokemonType]="pokemon.detail.types[0].type.name" [appPokemonType2]="pokemon.detail.types[1] == null ? null : pokemon.detail.types[1].type.name">
                 <img class="pokemon-img" [src]="pokemon.detail.sprites.front_default" alt="{{pokemon.name}}">
                 <h2 class="pokemon-name">{{pokemon.name|pokename}}</h2>
               </article>

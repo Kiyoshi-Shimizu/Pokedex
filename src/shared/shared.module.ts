@@ -5,13 +5,14 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HoverDirective } from './directives/hover.directive';
 import { PokemonTypeDirective } from './directives/pokemon-type.directive';
 import { PokemonService } from './services/pokemon.service';
-import { PokenamePipe } from './pipe/pokename.pipe';
+import { PokenamePipe } from './pipe/pokeName/pokename.pipe';
+import { FilterNamePipe } from './pipe/nameFilter/nameFilter.pipe';
 
 
 
 @NgModule({
   providers: [PokemonService],
-  declarations: [HoverDirective, PokemonTypeDirective, PokenamePipe],
+  declarations: [HoverDirective, PokemonTypeDirective, PokenamePipe, FilterNamePipe],
   imports: [
     CommonModule,
     ToolbarComponent
@@ -20,7 +21,8 @@ import { PokenamePipe } from './pipe/pokename.pipe';
     HoverDirective, 
     PokemonTypeDirective, 
     ToolbarComponent,
-    PokenamePipe
+    PokenamePipe,
+    FilterNamePipe
   ] 
 })
 export class SharedModule { }
