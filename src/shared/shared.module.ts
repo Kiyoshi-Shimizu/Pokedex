@@ -7,15 +7,25 @@ import { PokemonTypeDirective } from './directives/pokemon-type.directive';
 import { PokemonService } from './services/pokemon.service';
 import { PokenamePipe } from './pipe/pokeName/pokename.pipe';
 import { FilterNamePipe } from './pipe/nameFilter/nameFilter.pipe';
+import { FormsModule } from '@angular/forms';
+import { SearchComponent } from './components/search/search.component';
+import { AuthGuardService } from './guard/auth-guard.service';
 
 
 
 @NgModule({
-  providers: [PokemonService],
-  declarations: [HoverDirective, PokemonTypeDirective, PokenamePipe, FilterNamePipe],
+  providers: [PokemonService, AuthGuardService],
+  declarations: [
+    HoverDirective, 
+    PokemonTypeDirective, 
+    PokenamePipe, 
+    FilterNamePipe,
+    SearchComponent
+  ],
   imports: [
     CommonModule,
-    ToolbarComponent
+    ToolbarComponent,
+    FormsModule
   ],
   exports: [
     HoverDirective, 

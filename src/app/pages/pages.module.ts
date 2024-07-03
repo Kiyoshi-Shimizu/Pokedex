@@ -5,14 +5,15 @@ import { RouterModule } from '@angular/router';
 import { routes } from './pages.routes';
 import { ShellComponent } from './shell/shell.component';
 import { SharedModule } from '../../shared/shared.module';
+import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
 
 
 @NgModule({
-  declarations: [PagesComponent, ShellComponent],
+  declarations: [PagesComponent, ShellComponent, AuthCallbackComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
-    SharedModule
+    SharedModule,
   ],
   bootstrap: [PagesComponent]
 })

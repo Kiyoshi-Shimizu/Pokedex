@@ -1,16 +1,18 @@
-import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { PokemonEntity } from "../../../entities/pokemonEntity";
+import { Component, ElementRef, ViewChild } from '@angular/core';
+import { PokemonEntity } from '../../../entities/pokemonEntity';
+import { Router, ActivatedRoute } from '@angular/router';
+import { map, catchError } from 'rxjs';
 import { PokemonService } from '../../../../shared/services/pokemon.service';
-import { ActivatedRoute, Router } from "@angular/router";
-import { catchError, map } from "rxjs";
+import { SharedModule } from "../../../../shared/shared.module";
 
 @Component({
-  selector: 'app-pokedex-list',
-  standalone: false,
-  templateUrl: './pokedex-list.component.html',
-  styleUrl: './pokedex-list.component.scss'
+    selector: 'app-pokemon-manage',
+    standalone: true,
+    templateUrl: './pokemon-manage.component.html',
+    styleUrl: './pokemon-manage.component.scss',
+    imports: [SharedModule]
 })
-export class PokedexListComponent implements OnInit{
+export class PokemonManageComponent {
   pokeList: PokemonEntity[] = []
   filterValue: string = '';
   @ViewChild('autofocus') autofocus: ElementRef | undefined;
@@ -19,18 +21,6 @@ export class PokedexListComponent implements OnInit{
     this.getPokemons();
   }
   getPokemons(){
-    // this.pokeService.getPokemons().subscribe(response => {
-    //   response.results.forEach((pokemon: any) => {
-    //     this.pokeService.getPokemonDetails(pokemon.url).subscribe((data: any) => {
-    //       pokemon.detail = data;
-    //     });
-    //   });
-    //   this.pokeList = response.results;
-    // }, err => {
-    //   console.log(err);
-    //   return [];
-    // });
-
     this.pokeService.getPokemons().pipe(
       map(response => {
           response.results.forEach((pokemon: any) => {
