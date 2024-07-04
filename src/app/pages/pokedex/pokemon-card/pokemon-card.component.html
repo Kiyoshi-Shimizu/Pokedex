@@ -1,0 +1,8 @@
+<article class="pokemon-card" appHover (click)="openDetail(pokemon().detail.id)">
+    <img class="pokemon-model" [src]="pokemon().detail.sprites.other.showdown.front_default" alt="{{pokemon().name}}">
+    <article class="pokemon" id="pokemon-{{pokemon().detail.id}}" [appPokemonType]="pokemon().detail.types[0].type.name"
+            [appPokemonType2]="pokemon().detail.types[1] == null ? null : pokemon().detail.types[1].type.name">
+            <img class="pokemon-img" [src]="pokemon().detail.sprites.front_default" alt="{{pokemon().name}}">
+            <h2 class="pokemon-name">{{pokemon().name|pokename}}</h2>
+    </article>
+</article>

@@ -7,9 +7,11 @@ import { RouterModule } from "@angular/router";
 import { SharedModule } from "../../../shared/shared.module";
 import { FormsModule } from "@angular/forms";
 import {  provideHttpClient } from "@angular/common/http";
+import { PokemonCardComponent } from "./pokemon-card/pokemon-card.component";
+import { PokemonDetailComponent } from "./pokemon-detail/pokemon-detail.component";
 
 @NgModule({
-    declarations: [PokedexComponent, PokedexListComponent],
+    declarations: [PokedexComponent, PokedexListComponent, PokemonCardComponent, PokemonDetailComponent],
     imports: [
         CommonModule,
         SharedModule,

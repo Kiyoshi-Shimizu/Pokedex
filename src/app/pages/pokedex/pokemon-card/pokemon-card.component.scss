@@ -1,0 +1,66 @@
+:host{
+    margin: clamp(10px, 2.5%, 25px);
+    width: clamp(150px, 10%, 250px);
+    height: clamp(105px, 7.5%, 180px);
+}
+.pokemon-model {
+    height: 120px;
+    max-width: clamp(100px, 20%, 250px);
+    display: none;
+}
+
+.pokemon-card {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 40px;
+    transition: all 0.3s ease-in-out;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    box-shadow: inset 0 10px 70px rgba(0, 0, 0, 0.4);
+}
+
+
+.pokemon-card:hover {
+    .pokemon {
+        transform: perspective(900px) translateY(-5%) rotateX(25deg);
+        box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .pokemon-img {
+        transition: opacity 0.25s ease;
+        opacity: 0;
+    }
+
+    .pokemon-model {
+        display: inline;
+        opacity: 1;
+        position: absolute;
+        z-index: 1;
+        transition: all 0.5s ease;
+        animation: slideIn 0.5s ease;
+
+    }
+
+    @keyframes slideIn {
+        0% {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        100% {
+            transform: translateY(0%);
+            opacity: 1;
+        }
+
+    }
+}

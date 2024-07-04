@@ -1,7 +1,8 @@
 <main class="content">
     @if(pokemon){
         <section class="pokemon-card">
-            <article class="pokemon-detail-header">
+            <article class="pokemon-detail-header" [appPokemonType]="pokemon.detail.types[0].type.name"
+            [appPokemonType2]="pokemon.detail.types[1] == null ? null : pokemon.detail.types[1].type.name">
                 <img class="pokemon-detail-img" [src]="pokemon.detail.sprites.front_default" alt="{{pokemon.name}}">
                 <h1 class="pokemon-detail-name">{{pokemon.name}}</h1>
                 <span class="pokemon-detail-id">#{{pokemon.detail.id}}</span>

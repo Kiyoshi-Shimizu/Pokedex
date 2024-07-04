@@ -1,5 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { AuthService } from '../../../shared/services/auth.service';
+import { AuthService } from '../../../shared/services/auth/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -16,6 +16,7 @@ export class AuthCallbackComponent implements OnInit{
     this.checkSesion();
   }
   ngOnInit(): void {
+    this.checkSesion();
   }
 
   checkSesion(){
@@ -23,5 +24,6 @@ export class AuthCallbackComponent implements OnInit{
     if(this.isLogged){
       this.router.navigate(['']);
     }
+    this.router.navigate(['login']);
   }
 }

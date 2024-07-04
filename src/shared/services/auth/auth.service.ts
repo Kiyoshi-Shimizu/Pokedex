@@ -21,14 +21,16 @@ export class AuthService {
   isLoggedIn(): Observable<boolean>{
     let user = sessionStorage.getItem('userInfo');
     if(user == null)
-      return of(true);
-    return of(false)
+      return of(false);
+    return of(true)
   }
 
-  login(email:string, password: string){
+  login(email:string, password: string): Observable<boolean>{
     let user = this.users.find(u => u.email.toLowerCase() === email.toLowerCase() && u.password.toLowerCase() === password.toLowerCase());
     if(user){
       sessionStorage.setItem("userInfo", JSON.stringify(user));
+      return of(true);
     }
+    return of(false);
   }
 }

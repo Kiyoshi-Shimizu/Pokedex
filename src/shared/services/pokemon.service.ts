@@ -5,7 +5,7 @@ import { HttpClient } from "@angular/common/http";
 import { PokemonDetailEntity } from "../../app/entities/pokemonDetailEntity";
 
 const baseUrl: string = "https://pokeapi.co/api/v2/pokemon";
-const offset = 100;
+const offset = 150;
 
 @Injectable({
     providedIn: 'root'
