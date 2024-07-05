@@ -3,6 +3,7 @@ import { PagesComponent } from './pages.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuardService } from '../../shared/guard/auth-guard.service';
 import { AuthCallbackComponent } from './auth-callback/auth-callback.component';
+import { ShellComponent } from './shell/shell.component';
 
 export const routes: Routes = [
     {
@@ -12,7 +13,7 @@ export const routes: Routes = [
     {
         path: '',
         canActivate: [AuthGuardService],
-        component: PagesComponent,
+        component: ShellComponent,
         children: [
             {
                 path: '',

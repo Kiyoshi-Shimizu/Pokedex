@@ -10,8 +10,6 @@ export class AuthGuardService implements CanActivate{
     isLogged = false;
     canActivate(): boolean {
         this.auth.isLoggedIn().subscribe(e => this.isLogged = e);
-        if(this.isLogged)
-          return true;
-        return false;
+        return this.isLogged;
     }
 }

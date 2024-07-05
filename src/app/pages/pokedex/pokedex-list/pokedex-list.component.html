@@ -1,8 +1,5 @@
 <div class="content">
-  <div class="filterBox" fxFlex="60">
-    <label>Buscar</label>
-    <input #autofocus [(ngModel)]="filterValue">
-  </div>
+  <app-search (filterValueEvent)="filterExpression($event)"></app-search>
   <h1>Gotta Catch 'Em All!</h1>
   <section class="gallery">
     @for(pokemon of pokeList | filterName: filterValue; track pokemon.name){

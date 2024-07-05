@@ -32,7 +32,8 @@ import { AuthGuardService } from './guard/auth-guard.service';
     PokemonTypeDirective, 
     ToolbarComponent,
     PokenamePipe,
-    FilterNamePipe
+    FilterNamePipe,
+    SearchComponent
   ] 
 })
 export class SharedModule { }

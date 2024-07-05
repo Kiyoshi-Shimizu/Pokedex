@@ -33,4 +33,16 @@ export class AuthService {
     }
     return of(false);
   }
+
+  getUserRole(): Observable<string>{
+    let user = sessionStorage.getItem('userInfo');
+    if(user == null)
+      return of('');
+    return of(JSON.parse(user).role);
+  }
+
+  logout(): Observable<boolean>{
+    sessionStorage.removeItem('userInfo');
+    return of(true);
+  }
 }

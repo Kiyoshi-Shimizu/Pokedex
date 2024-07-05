@@ -4,13 +4,14 @@ import { PokedexListComponent } from './pokedex-list/pokedex-list.component';
 import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 import { PokemonManageComponent } from './pokemon-manage/pokemon-manage.component';
 import { AuthGuardService } from '../../../shared/guard/auth-guard.service';
+import { PokemonEditComponent } from './pokemon-edit/pokemon-edit.component';
 export const routes: Routes = [
     {
         path: '',
         component: PokedexComponent,
         children: [
             {
-                path: '',
+                path: 'pokedex',
                 component: PokedexListComponent,
                 data:{
                     title: 'Pokemon List'
@@ -21,8 +22,12 @@ export const routes: Routes = [
                 component: PokemonDetailComponent
             },
             {
-                path:'edit',
+                path:'manage-pokemon',
                 component: PokemonManageComponent
+            },
+            {
+                path:'manage-pokemon/:id',
+                component: PokemonEditComponent,
             }
         ]
     }

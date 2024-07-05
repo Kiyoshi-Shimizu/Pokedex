@@ -1,26 +1,31 @@
 <main class="content">
-    
+    <app-search (filterValueEvent)="filterValue = $event"></app-search>
     <table class="pokemon-table">
-        <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Height</th>
-            <th>Weight</th>
-            <th>Sprite</th>
-            <th>Actions</th>
-        </tr>
-        @for(pokemon of pokeList | filterName: filterValue; track pokemon.name){
+        <thead>
             <tr>
-                <td>{{pokemon.detail.id}}</td>
-                <td>{{pokemon.detail.name}}</td>
-                <td>{{pokemon.detail.height}}</td>
-                <td>{{pokemon.detail.weight}}</td>
-                <td>
-                    <img [src]="pokemon.detail.sprites.front_default"></td>
-                <td>
-                    <button>Edit</button>
-                </td>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Height</th>
+                <th>Weight</th>
+                <th>Sprite</th>
+                <th>Actions</th>
             </tr>
-        }
+        </thead>
+        <tbody>
+            @for(pokemon of pokeList | filterName: filterValue; track pokemon.name) {
+                <tr>
+                    <td>{{ pokemon.detail.id }}</td>
+                    <td>{{ pokemon.detail.name }}</td>
+                    <td>{{ pokemon.detail.height }}</td>
+                    <td>{{ pokemon.detail.weight }}</td>
+                    <td>
+                        <img [src]="pokemon.detail.sprites.front_default" alt="{{ pokemon.detail.name }} sprite">
+                    </td>
+                    <td>
+                        <button class="edit-button" (click)="editPokemon(pokemon.detail.id)">Edit</button>
+                    </td>
+                </tr>
+            }
+        </tbody>
     </table>
 </main>

@@ -41,4 +41,10 @@ export class PokemonManageComponent {
   openDetail(id: number){
     this.router.navigate(['details', id], {relativeTo: this.route});
   }
+  filterExpression(event:string){
+    this.filterValue = event;
+  }
+  editPokemon(id: number){
+    this.router.navigate(['manage-pokemon', id]);
+  }
 }

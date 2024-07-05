@@ -1,0 +1,7 @@
+<form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
+    <input type="text" formControlName="name" placeholder="Name">
+    <input type="text" formControlName="height" placeholder="Height">
+    <input type="text" formControlName="weight" placeholder="Weight">
+    <input type="text" formControlName="sprite" placeholder="Sprite">
+    <button type="submit" [disabled]="pokemonForm.valid">Save</button>
+</form>

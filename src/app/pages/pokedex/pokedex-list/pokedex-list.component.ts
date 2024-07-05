@@ -74,9 +74,8 @@ export class PokedexListComponent implements OnInit{
     //   this.pokeList = pokeList;
     // });
 
-          
-
-          
   }
-
+  filterExpression(event:string){
+    this.filterValue = event;
+  }
 }
