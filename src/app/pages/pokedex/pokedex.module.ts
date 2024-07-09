@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { routes } from "./pokedex.routes";
+import { pokedexRoutes } from "./pokedex.routes";
 import { PokedexComponent } from "./pokedex.component";
 import { PokedexListComponent } from "./pokedex-list/pokedex-list.component";
 import { CommonModule } from "@angular/common";
@@ -21,10 +21,10 @@ import { PokemonEditComponent } from "./pokemon-edit/pokemon-edit.component";
     ],
     imports: [
         CommonModule,
+        RouterModule.forChild(pokedexRoutes),
         SharedModule,
         FormsModule,
         ReactiveFormsModule,
-        RouterModule.forChild(routes)
     ],
     providers: [provideHttpClient()],
     bootstrap: [PokedexComponent]

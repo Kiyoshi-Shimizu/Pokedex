@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pokedex',
+  selector: 'app-region',
   standalone: false,
   template: `<router-outlet></router-outlet>`,
-  styles: ``
+  styleUrl: './region.component.scss'
 })
-export class PokedexComponent {
-  
+export class RegionComponent {
+
 }

@@ -22,7 +22,7 @@ export class AuthCallbackComponent implements OnInit{
   checkSesion(){
     this.auth.isLoggedIn().subscribe(e => this.isLogged = e);
     if(this.isLogged){
-      this.router.navigate(['']);
+      this.router.navigate(['home']);
       return;
     }
     this.router.navigate(['login']);

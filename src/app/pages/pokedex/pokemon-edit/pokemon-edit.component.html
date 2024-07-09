@@ -1,7 +1,18 @@
-<form [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
-    <input type="text" formControlName="name" placeholder="Name">
-    <input type="text" formControlName="height" placeholder="Height">
-    <input type="text" formControlName="weight" placeholder="Weight">
-    <input type="text" formControlName="sprite" placeholder="Sprite">
-    <button type="submit" [disabled]="pokemonForm.valid">Save</button>
+<form class="formGroup" [formGroup]="pokemonForm" (ngSubmit)="onSubmit()">
+    <h2>Name</h2>
+    <input class="input-text" type="text" formControlName="name" placeholder="Name">
+    
+    <h2>Height</h2>
+    <input class="input-text" type="text" formControlName="height" placeholder="Height">
+    
+    <h2>Weight</h2>
+    <input class="input-text" type="text" formControlName="weight" placeholder="Weight">
+    
+    <h2>Sprite</h2>
+    <input class="input-text" type="text" formControlName="sprite" placeholder="Sprite">
+    
+    <h2>3D-Sprite</h2>
+    <input class="input-text" type="text" formControlName="sprite3d" placeholder="3D-Sprite">
+    
+    <button class="submit" type="submit" [disabled]="!pokemonForm.valid">Save</button>
 </form>

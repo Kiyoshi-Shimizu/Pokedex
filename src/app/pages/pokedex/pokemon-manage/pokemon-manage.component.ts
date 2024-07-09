@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { PokemonEntity } from '../../../entities/pokemonEntity';
+import { PokemonEntity } from './../../../../shared/entities/pokemon/pokemonEntity';
 import { Router, ActivatedRoute } from '@angular/router';
 import { map, catchError } from 'rxjs';
 import { PokemonService } from '../../../../shared/services/pokemon.service';
@@ -46,5 +46,12 @@ export class PokemonManageComponent {
   }
   editPokemon(id: number){
     this.router.navigate(['manage-pokemon', id]);
+  }
+  addPokemon() {
+    this.router.navigate(['manage-pokemon', 0]);
+  }
+  revertChanges(){
+    this.pokeService.eliminarModificaciones();
+    this.getPokemons();
   }
 }

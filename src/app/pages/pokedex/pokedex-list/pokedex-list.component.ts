@@ -1,5 +1,5 @@
+import { PokemonEntity } from './../../../../shared/entities/pokemon/pokemonEntity';
 import { Component, ElementRef, OnInit, ViewChild } from "@angular/core";
-import { PokemonEntity } from "../../../entities/pokemonEntity";
 import { PokemonService } from '../../../../shared/services/pokemon.service';
 import { ActivatedRoute, Router } from "@angular/router";
 import { catchError, concatMap, forkJoin, map, mergeMap } from "rxjs";
@@ -48,6 +48,7 @@ export class PokedexListComponent implements OnInit{
       })
     ).subscribe(pokeList => {
         this.pokeList = pokeList;
+        console.log(this.pokeList)
     });
 
 

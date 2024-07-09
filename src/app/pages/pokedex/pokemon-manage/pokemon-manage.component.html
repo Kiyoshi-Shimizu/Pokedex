@@ -1,4 +1,6 @@
 <main class="content">
+    <button class="add-button" (click)="addPokemon()">Add Pokemon</button>
+    <button class="revert-button" (click)="revertChanges()">Revert Changes</button>
     <app-search (filterValueEvent)="filterValue = $event"></app-search>
     <table class="pokemon-table">
         <thead>
@@ -8,6 +10,7 @@
                 <th>Height</th>
                 <th>Weight</th>
                 <th>Sprite</th>
+                <th>3D-Sprite</th>
                 <th>Actions</th>
             </tr>
         </thead>
@@ -21,6 +24,8 @@
                     <td>
                         <img [src]="pokemon.detail.sprites.front_default" alt="{{ pokemon.detail.name }} sprite">
                     </td>
+                    <td>
+                        <img [src]="pokemon.detail.sprites.other.showdown.front_default" alt="{{ pokemon.detail.name }} 3D sprite">
                     <td>
                         <button class="edit-button" (click)="editPokemon(pokemon.detail.id)">Edit</button>
                     </td>

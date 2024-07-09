@@ -1,9 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { MenuOption } from '../../../app/entities/menu-option/menuOption';
 import { MenuService } from '../../services/general/menu.service';
 import { AuthService } from '../../services/auth/auth.service';
 import { filter, switchMap } from 'rxjs';
 import { Router } from '@angular/router';
+import { MenuOption } from '../../entities/menu-option/menuOption';
 
 @Component({
   selector: 'app-menu',
@@ -13,7 +13,7 @@ import { Router } from '@angular/router';
     {
       <a class="menu-option" href="{{option.routerLink}}">{{option.name}}</a>
     }
-    <button id="logout" (click)="login()">Logout</button>
+    <button id="logout" (click)="logout()">Logout</button>
   </section>`,
   styleUrl: './menu.component.scss'
 })
@@ -29,7 +29,7 @@ export class MenuComponent implements OnInit{
       switchMap(d => this.menuService.getMenuByRole(d))
     ).subscribe(f => this.menuOptions = f);
   }
-  login(){
+  logout(){
     this.authService.logout().subscribe(() => this.router.navigate(['/login']));
   }
 }

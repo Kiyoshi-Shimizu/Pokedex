@@ -5,11 +5,14 @@ import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.componen
 import { PokemonManageComponent } from './pokemon-manage/pokemon-manage.component';
 import { AuthGuardService } from '../../../shared/guard/auth-guard.service';
 import { PokemonEditComponent } from './pokemon-edit/pokemon-edit.component';
-export const routes: Routes = [
+export const pokedexRoutes: Routes = [
     {
         path: '',
-        component: PokedexComponent,
         children: [
+            {
+                path: 'home',
+                component: PokedexComponent,
+            },
             {
                 path: 'pokedex',
                 component: PokedexListComponent,

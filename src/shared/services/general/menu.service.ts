@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { MenuOption } from '../../../app/entities/menu-option/menuOption';
 import { adminMenu, userMenu } from '../../const/menuOptions';
+import { MenuOption } from '../../entities/menu-option/menuOption';
 
 
 

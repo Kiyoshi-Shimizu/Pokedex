@@ -1,9 +1,13 @@
 .content {
     display: flex;
-    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
     flex-direction: column;
-    margin-top: 60px;
+    align-items: center;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
 }
+
 .pokemon-table {
     width: 80%;
     border-collapse: collapse;

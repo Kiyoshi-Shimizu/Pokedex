@@ -1,9 +1,10 @@
-import { MenuOption } from "../../app/entities/menu-option/menuOption"
+import { MenuOption } from './../entities/menu-option/menuOption';
+
 
 export const adminMenu: MenuOption[] = [
     {
       name: "Home",
-      routerLink: ""
+      routerLink: "home"
     },
     {
       name: "Pokedex",
@@ -18,7 +19,7 @@ export const adminMenu: MenuOption[] = [
   export const userMenu: MenuOption[] = [
     {
       name: "Home",
-      routerLink: ""
+      routerLink: "home"
     },
     {
       name: "Pokedex",
